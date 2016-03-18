@@ -1,11 +1,11 @@
 
 public class TokenInfo {
-	String type;
-	String attribute;
-	int line;
+	private TokenTypeEnum type;
+	private String attribute;
+	private int line;
 	
 	
-	public TokenInfo(String type, String attribute, int line) {
+	public TokenInfo(TokenTypeEnum type, String attribute, int line) {
 		this.type = type;
 		this.attribute = attribute;
 		this.line = line;
@@ -16,7 +16,7 @@ public class TokenInfo {
 		return type + ";" + attribute + ";" + line;
 	}
 	
-	public String getType() {
+	public TokenTypeEnum getType() {
 		return type;
 	}
 }

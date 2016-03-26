@@ -138,6 +138,29 @@ public class Scanner {
 				} else {
 					return new TokenInfo(TokenTypeEnum.ASSIGN, "", line);					
 				}
+
+			case '<':
+			case '>':
+				String attrib = "" + c;
+				c = charReader.getChar();
+				
+				if(c == '=') {
+					attrib += c;
+					c = charReader.getChar();
+				}
+				
+				return new TokenInfo(TokenTypeEnum.REL, attrib, line);
+				
+			case '!':
+				c = charReader.getChar();
+				
+				if(c == '=') {
+					c = charReader.getChar();
+					return new TokenInfo(TokenTypeEnum.REL, "!=", line);
+				
+				} else {
+					return new TokenInfo(TokenTypeEnum.ERROR, "", line);
+				}
 				
 			}
 

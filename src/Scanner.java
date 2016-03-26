@@ -188,8 +188,15 @@ public class Scanner {
 			e.printStackTrace();
 		}
 
-
-		return new TokenInfo(TokenTypeEnum.EOF, "", -1);
+		
+		//Doesn't match any pattern, return ERROR token
+		try {
+			c = charReader.getChar();
+		} catch (IOException e) {
+			System.out.println("[ERROR] Couldn't read file: " + e.toString());
+			e.printStackTrace();
+		}
+		return new TokenInfo(TokenTypeEnum.ERROR, "", line);
 	}
 
 }

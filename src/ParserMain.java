@@ -34,7 +34,7 @@ public class ParserMain {
 				token = sc.yylex();
 				if(token.getType() != TokenTypeEnum.WHITE && token.getType() != TokenTypeEnum.CMMNT && token.getType() != TokenTypeEnum.EOF) {
 					
-					System.out.println(token); //TODO DEBUG
+//					System.out.println(token); //TODO DEBUG
 					writer.write(token.toString() + "\n");
 				}
 

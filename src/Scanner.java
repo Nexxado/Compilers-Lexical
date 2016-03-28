@@ -75,21 +75,6 @@ public class Scanner {
 
 			case '-':
 				c = charReader.getChar();
-				
-				//Check for negative digit - edge case: (digit or variable) minus digit
-				if(Character.isDigit(c)) {
-					
-					StringBuilder builder = new StringBuilder();
-					builder.append("-" + c);
-					
-					while(Character.isDigit(c) || c == '.') {
-						builder.append(c);
-						c = charReader.getChar();
-					}
-					
-					return new TokenInfo(TokenTypeEnum.NUM, builder.toString(), line);
-				}
-				
 				return new TokenInfo(TokenTypeEnum.MINUS, "", line);
 
 			case '*':

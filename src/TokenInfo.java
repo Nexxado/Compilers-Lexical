@@ -13,7 +13,7 @@ public class TokenInfo {
 	
 	@Override
 	public String toString() {
-		return type + ";" + attribute + ";" + line;
+		return type + ";" + attribute + ";" + (line + 1); //Line starts at 1
 	}
 	
 	public TokenTypeEnum getType() {

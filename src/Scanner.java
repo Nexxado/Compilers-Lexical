@@ -19,7 +19,7 @@ public class Scanner {
 		reserved.put("int", TokenTypeEnum.INT);
 		reserved.put("func", TokenTypeEnum.FUNC);
 		reserved.put("main", TokenTypeEnum.MAIN);
-		reserved.put("IF", TokenTypeEnum.IF);
+		reserved.put("if", TokenTypeEnum.IF);
 		reserved.put("then", TokenTypeEnum.THEN);
 		reserved.put("else", TokenTypeEnum.ELSE);
 		
